@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Основные языки Front-End</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src=" https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCQAYNZKHkraWVnzb05W-dHdodeiW8Ua54",
+            authDomain: "test-26ff4.firebaseapp.com",
+            databaseURL: "https://test-26ff4.firebaseio.com",
+            projectId: "test-26ff4",
+            storageBucket: "test-26ff4.appspot.com",
+            messagingSenderId: "242388076504"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="site-content">
+            <header>
+                <div id="error"></div>
+                <div class="menu-container">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-bars" aria-hidden="true" id="burger"></i>
+                        </li>
+                    </ul>
+
+                    <ul class="authmenu">
+                        <li class="Login">
+                            <a href="#">Login</a>
+                        </li>
+                        <li class="Reg">
+                            <a href="#">Registration</a>
+                        </li>
+                    </ul>
+                    <div class="name"></div>
+                    <button id="logOut">log out</button>
+
+                </div>
+            </header>
+
+            <div id="modal-reg">
+                <form name="register" action="" class="hideRegForm">
+                    <h3>Введите данные</h3>
+                    <input type="text" id="register_login" placeholder="Login">
+                    <input type="text" id="register_email" placeholder="email">
+                    <input type="password" id="register_password" placeholder="Password">
+                    <input type="password" id="register_confirmation" placeholder="Repeat password ">
+                    <button type="submit" id="register">Register</button>
+                </form>
+                <button class="cancel">CANCEL</button>
+            </div>
+
+            <div id="modal-login">
+                <form name="login" action="" class="hideLoginForm">
+                    <h3>Введите данные</h3>
+                    <input type="text" id="auth_login" placeholder="email">
+                    <input type="password" id="auth_password" placeholder="password">
+                    <button type="submit" id="auth">Auth</button>
+                </form>
+                <button class="cancel">CANCEL</button>
+            </div>
+
+            <div class="container">
+                <section class="content">
+                    <h1>Основные языки Front-End</h1>
+                    <h3>HTML</h3>
+                    <p> HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — HTML (или XHTML). Язык HTML
+                        интерпретируется браузерами; полученный в результате интерпретации форматированный текст отображается
+                        на экране монитора компьютера или мобильного устройства.</p>
+                    <p> Язык HTML до 5-ой версии определялся как приложение SGML (стандартного обобщённого языка разметки по
+                        стандарту ISO 8879). Спецификации HTML5 формулируются в терминах DOM (объектной модели документа).
+                    </p>
+                    <p> Язык XHTML является более строгим вариантом HTML, он следует синтаксису XML и является приложением языка
+                        XML в области разметки гипертекста.</p>
+                    <p> Во всемирной паутине HTML-страницы, как правило, передаются браузерам от сервера по протоколам HTTP или
+                        HTTPS, в виде простого текста или с использованием шифрования.</p>
+                    <h3>CSS</h3>
+                    <p>CSS (/siːɛsɛs/ англ. Cascading Style Sheets — каскадные таблицы стилей) — формальный язык описания внешнего
+                        вида документа, написанного с использованием языка разметки.
+                    </p>
+                    <p> Преимущественно используется как средство описания, оформления внешнего вида веб-страниц, написанных
+                        с помощью языков разметки HTML и XHTML, но может также применяться к любым XML-документам, например,
+                        к SVG или XUL.</p>
+                    <h3>JavaScript</h3>
+                    <p>JavaScript (/ˈdʒɑːvɑːˌskrɪpt/; аббр. JS /ˈdʒeɪ.ɛs./) — мультипарадигменный язык программирования. Поддерживает
+                        объектно-ориентированный, императивный и функциональный стили. Является реализацией языка ECMAScript
+                        (стандарт ECMA-262[6]).
+                    </p>
+                    <p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений.
+                        Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам[7].</p>
+                    <p>Основные архитектурные черты: динамическая типизация, слабая типизация, автоматическое управление памятью,
+                        прототипное программирование, функции как объекты первого класса.</p>
+                    <p>На JavaScript оказали влияние многие языки, при разработке была цель сделать язык похожим на Java, но
+                        при этом лёгким для использования непрограммистами. Языком JavaScript не владеет какая-либо компания
+                        или организация, что отличает его от ряда языков программирования, используемых в веб-разработке[~
+                        1][8].
+                    </p>
+                    <p>Название «JavaScript» является зарегистрированным товарным знаком компании Oracle Corporation[9].</p>
+                </section>
+
+                <section class="sidebar">
+                    <input type="text" id="fontSize" placeholder="Введите размер текста от 8 до 24 px">
+                    <select name="backgroundColor" id="backgroundColor">
+                        <option value="grey">Grey</option>
+                        <option value="green">Green</option>
+                        <option value="yellow" selected>Yellow</option>
+                    </select>
+                    <select name="fontFamily" id="fontFamily">
+                        <option value="serif">serif</option>
+                        <option value="sans-serif">sans-serif</option>
+                        <option value="monospace">monospace</option>
+                        <option value="cursive">cursive</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="system-ui">system-ui</option>
+                    </select>
+                    <button id="deleteP">Delete P</button>
+
+                    <h3>Best CSS frameworks</h3>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>Foundation</li>
+                        <li>Bulma</li>
+                        <li>Ulkit</li>
+                        <li>Semantic UI</li>
+                    </ul>
+                    <h3>Best JavaScript frameworks</h3>
+                    <ul>
+                        <li>Angular</li>
+                        <li>ReactJS</li>
+                        <li>Vue.js</li>
+                        <li>Ember.js</li>
+                        <li>Meteor.js</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <p>qwertyFEschool Andrey Panchenko 2018 &copy;</p>
+            <div class="social">
+                <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

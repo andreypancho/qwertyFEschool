@@ -1,0 +1,172 @@
+@yellow: yellow;
+@red: rgb(235, 78, 78);
+@green: rgb(151, 219, 14);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: @yellow;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.site-content {
+  flex: 1 0 auto;
+}
+
+.container,
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  align-items: unset;
+}
+
+.content {
+  h1 {
+    text-align: center;
+  }
+  h3 {
+    margin: 10px 20px;
+  }
+  max-width: 70vw;
+  text-align: justify;
+}
+
+.sidebar {
+  max-width: 20vw;
+  padding: 10px 20px;
+  margin-left: 2vw;
+  h3 {
+    margin: 5px auto;
+  }
+}
+
+.logo img {
+  height: 100px;
+}
+
+.menu,
+.authmenu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  li {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  a {
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.authmenu li:first-child {
+  margin-right: 1vw;
+}
+
+.menu li:hover {
+  background: darken(@yellow, 5);
+  a {
+    border-bottom: 1px solid black;
+  }
+}
+
+.Login {
+  background: @green;
+  border-radius: 10px;
+  &:hover {
+    background: darken(@green, 5);
+  }
+}
+.Reg {
+  background: @red;
+  border-radius: 10px;
+  &:hover {
+    background: darken(@red, 5);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: desaturate(@yellow, 90);
+  flex: 0 0 auto;
+}
+
+#modal-login,
+#modal-reg {
+  display: none;
+  text-align: center;
+  max-width: 150px;
+  position: absolute;
+  outline: 1px black solid;
+  background: springgreen;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  input {
+    margin: 5px 0;
+    max-width: 140px;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 5px;
+    border: solid 1px black;
+    margin-top: 10px;
+  }
+}
+
+.send:hover {
+  background: yellowgreen;
+}
+
+.cancel:hover {
+  background: rgb(235, 78, 78);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 5vw;
+  }
+  .content,
+  .sidebar {
+    max-width: 90vw;
+  }
+  #modal-login,
+  #modal-reg {
+    top: 50vh;
+  }
+  .menu-container {
+    flex-direction: column;
+    justify-content: center;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
